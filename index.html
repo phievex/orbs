@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+      <title>Example Homepage</title>
+        <style>
+        body {
+        background-color: rgb(41, 179, 197);
+        text-align: center;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .footer1{
+      text-shadow:none;
+      color:black;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 200px;
+    }
+        
+       
+
+
+
+
+
+
+/*the button you can click for the language collapsible*/
+
+.languagecollapsible {
+
+    background-color:rgb(18, 0, 182);
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 14px;
+
+    width: 256px;
+
+    height:50px;
+
+    border: none;
+
+    text-align: left;
+
+    outline: none;
+
+    font-size: 18px;
+
+ 
+
+    float:right;
+
+    margin-right:50px;
+
+    top:76px;
+
+}
+
+
+
+/*the plus to the right in the language collapsible*/
+
+.languagecollapsible:after {
+
+    content: '\002B';
+
+    color: white;
+
+    font-weight: bold;
+
+    float: right;
+
+    margin-left: 5px;
+
+}
+
+/*the minus to the right in the language co... av Eskil Janbu
+Eskil Janbu12:56
+
+
+/*the minus to the right in the language collapsible*/
+
+.languageactive:after {
+
+    content: "\2212";
+
+}
+
+
+
+/*oh wow gives the language menu a darker colour at hover*/
+
+.languagecollapsible:hover {
+
+    background-color:rgb(19, 0, 194);
+
+}
+
+   
+
+
+
+/*the grey stuff in the language menu*/
+
+.languagecontent {
+
+    padding: 0 18px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+    background-color: whitesmoke;
+
+     
+
+    width:220px;
+
+    margin-top:50px;
+
+ 
+
+    float:right;
+
+    margin-right:-256px;
+
+ 
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    z-index: 2;  
+
+}
+
+</style>
+  </head>
+
+  <body>
+    
+    <a href="log 8.html"><p class="myClass" id="myId">super hero!</p></a>
+  
+    
+  
+
+<p><h1>orbulon</h1></p>
+<img src="orbulon.png" style="width:500px;height:300px;" class="center">
+
+<section>
+<p><h2>backstory</h2></p>
+<p>orbulon is an alien who swore to destroy earth, but after multiple failed attempts tried to help other aliens who had the same goal, but he grew to dislike these aliens because of their doubtness and lack of common sence.</p>
+<p>after he protected earth from aliens he kinda just evolved into its protector.</p>
+<a href="question.html"></a>
+<button class='languagecollapsible'>powers</button>
+  <div class='languagecontent'>
+    <p>orbulon has many powers, he can fly in his miniature U.F.O and shoot lazers from the bottom of it. he has control of a orbital cannon that shoots even bigger lazers. basically lazers. and lazers. possibly even more lazers.</p>
+  </div>
+
+
+
+<script>
+
+  var coll = document.getElementsByClassName('languagecollapsible');
+
+  var i;
+
+     
+
+  for (i = 0; i < coll.length; i++) {
+
+      coll[i].addEventListener('click', function() {
+
+      this.classList.toggle('languageactive');
+
+      var content = this.nextElementSibling;
+
+      if (content.style.maxHeight){
+
+          content.style.maxHeight = null;
+
+      } else {
+
+          content.style.maxHeight = content.scrollHeight + 'px';
+
+      }
+
+      });
+
+  }
+
+</script>
+</body>
+</html>
